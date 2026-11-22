@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information System</title>
+
+    <style>
+        /* General Styling */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f5f9;
+            color: #333333;
+        }
+
+        /* Header */
+        header {
+            background-color: #173b70;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #24549a;
+            text-align: center;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 18px;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #f0a500;
+            color: #172b4d;
+            border-radius: 5px;
+        }
+
+        /* Main Layout */
+        main {
+            width: 90%;
+            max-width: 1100px;
+            margin: 25px auto;
+        }
+
+        /* Sections */
+        section {
+            background-color: white;
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        section h2 {
+            color: #173b70;
+            text-align: center;
+            border-bottom: 2px solid #24549a;
+            padding-bottom: 10px;
+        }
+
+        /* Welcome Section */
+        .welcome {
+            text-align: center;
+            background-color: #dceafe;
+            padding: 40px;
+        }
+
+        .welcome p {
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        /* Cards */
+        .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #d1dce8;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px 0;
+            width: 100%;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .card-container .card {
+            flex: 1 1 250px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            color: #24549a;
+        }
+
+        /* Positioning */
+        .badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background-color: #198754;
+            color: white;
+            padding: 6px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th {
+            background-color: #24549a;
+            color: white;
+        }
+
+        th, td {
+            border: 1px solid #cccccc;
+            padding: 14px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #edf3fa;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #173b70;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 22px;
+            }
+
+            nav a {
+                padding: 10px;
+            }
+
+            main {
+                width: 95%;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            table {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>STUDENT INFORMATION SYSTEM</h1>
+        <p>Your Academic Journey Starts Here</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#profile">Profile</a>
+        <a href="#courses">Courses</a>
+        <a href="#attendance">Attendance</a>
+        <a href="#exams">Examinations</a>
+    </nav>
+
+    <main>
+
+        <!-- Home Section -->
+        <section id="home" class="welcome">
+            <h2>Welcome to Student Portal</h2>
+            <p>
+                Manage your academic information in one place.
+                View your profile, courses, attendance and
+                examination details easily.
+            </p>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile">
+            <h2>Student Profile</h2>
+
+            <div class="card-container">
+                <article class="card">
+                    <h3>Personal Details</h3>
+                    <p><b>Name:</b> Anagha US</p>
+                    <p><b>Student ID:</b> URK26CS9020</p>
+                    <p><b>Department:</b> Computer Science</p>
+                    <p><b>Semester:</b> First Semester</p>
+                    <span class="badge">Active Student</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses">
+            <h2>My Courses</h2>
+
+            <div class="card-container">
+                <article class="card">
+                    <h3>Web Technology</h3>
+                    <p>Learn HTML, CSS and web development.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Digital Electronics</h3>
+                    <p>Study digital circuits and logic gates.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Mathematics</h3>
+                    <p>Learn mathematical concepts and applications.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Attendance Section -->
+        <section id="attendance">
+            <h2>Attendance Details</h2>
+
+            <table>
+                <tr>
+                    <th>Subject</th>
+                    <th>Total Classes</th>
+                    <th>Attended</th>
+                    <th>Percentage</th>
+                </tr>
+
+                <tr>
+                    <td>Web Technology</td>
+                    <td>30</td>
+                    <td>27</td>
+                    <td>90%</td>
+                </tr>
+
+                <tr>
+                    <td>Digital Electronics</td>
+                    <td>30</td>
+                    <td>25</td>
+                    <td>83%</td>
+                </tr>
+
+                <tr>
+                    <td>Mathematics</td>
+                    <td>30</td>
+                    <td>28</td>
+                    <td>93%</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Examination Section -->
+        <section id="exams">
+            <h2>Examination Information</h2>
+
+            <div class="card">
+                <p>1. Internal Examination</p>
+                <p>2. Practical Examination</p>
+                <p>3. Semester Examination</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Student Information System</p>
+        <p>All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
